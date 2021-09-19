@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 
+from django.conf.urls import url,include
+
 urlpatterns = [
-    path('upload',include('upload.urls')),
+    path('upload/',include('upload.urls')),
     path('admin/', admin.site.urls),
+    url(r'^',include('upload.urls'))
 ]
